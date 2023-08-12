@@ -6,8 +6,7 @@
 class Solution:
     def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
         
-        prev = head
-        temp = head.next
+        prev, temp = head, head.next
         index = []
         count = 2
 
@@ -18,7 +17,7 @@ class Solution:
             temp = temp.next
             count += 1
             
-        if not (len(index) > 1 or temp.next):
+        if not (len(index) > 1):
             return [-1, -1]
         
             
