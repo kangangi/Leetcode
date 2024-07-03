@@ -2,7 +2,7 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         k = 0
         for i in range(len(nums)):
-            if not nums[i] in nums[:i]:
+            if not nums[i] in nums[:k]:
                 nums[k] = nums[i]
                 k += 1
                 
