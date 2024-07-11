@@ -5,6 +5,6 @@ class Solution:
         for num in nums:
             if count == 0:
                 k = num
-            count = count + 1 if num == k else count -1
+            count +=  1 if num == k else -1
         return k
         
