@@ -3,8 +3,6 @@ class Solution:
         profit = 0
         
         for i in range(1, len(prices)):
-            if prices[i] > prices[i-1]:
-                profit += prices[i] - prices[i - 1]
-                
+            profit += max(prices[i] - prices[i-1], 0)
         return profit
         
