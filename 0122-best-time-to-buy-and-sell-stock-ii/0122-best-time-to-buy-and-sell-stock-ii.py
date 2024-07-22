@@ -3,6 +3,5 @@ class Solution:
         profit = 0
         
         for i in range(1, len(prices)):
-            profit += max(prices[i] - prices[i-1], 0)
+            profit += max(0, prices[i]- prices[i-1])
         return profit
-        
